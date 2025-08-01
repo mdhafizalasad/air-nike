@@ -498,6 +498,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .section-left {
   max-width: 422px;
+  flex-shrink: 0;
 }
 .subtitle{
   position: relative;
@@ -557,11 +558,39 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(-30deg);
 }
 
+.trending-section{
+  overflow: hidden;
+}
+
+.trending-product-slider {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 .product-card{
   border: 1px solid var(--border-color);
-  max-width: 312px;
+  max-width: 260px;
   border-radius: 5px;
   padding: 30px 32px;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.product-card .product-feature-image {
+  position: relative;
+}
+
+.product-card .product-feature-image img {
+  transition: 0.3s;
+}
+
+.product-card .product-feature-image .hover-state{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0;
+  transition: 0.3s;
 }
 
 .product-card-content {
@@ -602,4 +631,85 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition: 0.3s;
+}
+
+.explore-btn i{
+  transform: rotate(-30deg);
+}
+
+.product-card:hover {
+  box-shadow: 0px 0px 40px rgba(0,0,0,0.2);
+  /* border-color: transparent; */
+}
+
+.product-card:hover .product-feature-image .hover-state {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.product-card:hover .product-feature-image .normal-state {
+  opacity: 0;
+}
+
+.product-card:hover .explore-btn{
+  background: var(--primary-color);
+  color: var(--text-white);
+}
+
+.trending-product-slider-control {
+  display: flex;
+  padding-left: 35%;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.trending-product-slider-control li {
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.trending-product-slider-control li.active{
+  opacity: 1;
+  width: 18px;
+  border-radius: 8px;
+}
+
+@media (max-width:1200px) {
+  .trending-product-slider-control {
+    padding: 15%;
+  }
+}
+
+@media (max-width:950px) {
+  .trending-section .container {
+    max-width: 800px;
+  }
+  .trending-content-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:450px) {
+.section-left{
+flex-shrink: initial;
+}
+.section-left h3 {
+  font-size: 42px;
+  line-height: 46px;
+}
+
+.rounded-btn-primary {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+}
+
+ .trending-product-slider-control {
+    padding: 10%;
+  }
 }
