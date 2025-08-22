@@ -13,7 +13,7 @@
 :root {
   --template-font: "Roboto", sans-serif;
   --secondary-font: "Inter", sans-serif;
-  --heading-font: "Poppins", sans-serif;
+  --heading-font: "Poppins", sans-serif; 
   --text-color: #6b6b6b;
   --heading-color: #050025;
   --text-dark: #212b36;
@@ -23,6 +23,9 @@
   --dark-canvus-bg: #00051d;
   --border-color: #eaeaea;
   --black-color: #000000;
+  --card-bg: rgba(251, 240, 242, 0.5);
+  --review-yellow: #F9C02F;
+  --review-gray: #C4CDD5;
 }
 
 /** typography **/
@@ -55,16 +58,19 @@ ul {
   list-style: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: var(--heading-font);
   font-weight: 700;
   color: var(--heading-color);
+}
+
+.text-center {
+text-align: center;
+}
+
+.mt-50 {
+  margin-top: 50px;
 }
 
 /** theme animations **/
@@ -395,8 +401,7 @@ h6 {
   margin-bottom: 40px;
 }
 
-.btn-primary,
-.btn-transparent {
+.btn-primary, .btn-transparent, .outline-btn {
   padding: 18px 28px;
   border-radius: 50px;
   background-color: var(--primary-color);
@@ -429,6 +434,19 @@ h6 {
 
 .btn-transparent:hover {
   color: var(--text-white);
+}
+
+.outline-btn {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+}
+
+.outline-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  border-color: var(--primary-color);
 }
 
 .hero-btn-group a {
@@ -590,6 +608,7 @@ h6 {
 
 .product-card .product-feature-image {
   position: relative;
+  text-align: center;
 }
 
 .product-card .product-feature-image img {
@@ -915,24 +934,26 @@ h6 {
 .best-selling {
   overflow: hidden;
   margin-top: -100px;
+  padding-bottom: 170px;
 }
 
-.best-selling > h2 {
-  text-align: right;
-  margin-right: -30px;
+.stroke-gradient-text{
   font-size: 198px;
   font-weight: 900;
   font-family: var(--heading-font);
   line-height: 1em;
   letter-spacing: 0.01em;
-  /* background-image: url(../images/banner.jpeg); */
   background: linear-gradient(182deg, #ec092ca8 -66.76%, rgba(236, 9, 44, 0) 32.9%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
--webkit-text-stroke-color: rgba(236, 9, 43, 0.5);
-text-transform: uppercase;
+  -webkit-text-stroke-color: rgba(236, 9, 43, 0.5);
+  text-transform: uppercase;
+}
 
+.best-selling > h2 {
+  text-align: right;
+  margin-right: -30px;
 }
 
 .best-selling-top {
@@ -953,9 +974,11 @@ text-transform: uppercase;
 
 .filter-nav {
   margin-top: 32px;
+  margin-bottom: 64px;
   display: flex;
   gap: 25px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .filter-nav li a {
@@ -970,4 +993,178 @@ text-transform: uppercase;
 .filter-nav li a.active{
   background: var(--primary-color);
   color: var(--text-white);
+}
+
+
+.bst_products_row{
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.bst_products_row .product-card{
+  width: calc(33% - 13px);
+  max-width: 100%;
+}
+
+.product-card.style-2 {
+  padding: 0;
+  box-shadow: 0px 1px 2px rgba(145, 158, 171, 0.16);
+  border: 0;
+
+}
+
+.product-card.style-2 .product-feature-image{
+  background: var(--card-bg);
+  min-height: 385px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card.style-2 .product-actions-btn{
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-card.style-2 .product-actions-btn button{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--text-white);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.product-card.style-2 .product-actions-btn svg path{
+  transition: 0.3s;
+}
+.product-card.style-2 .product-actions-btn button:hover{
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-white);
+}
+
+.product-card.style-2 .product-actions-btn button:hover svg path{
+  fill: var(--text-white);
+}
+
+.product-card.style-2 .product-actions-btn button:hover svg.stroke-color path{
+  fill: transparent;
+  stroke: var(--text-white);
+}
+.product-card.style-2 .product-card-content{
+  padding: 32px;
+}
+
+.product-card.style-2 .product-card-content h4{
+  margin-bottom: 0;
+}
+
+.product-card .product-reviews-star{
+  display: flex;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.product-card .product-reviews-star li{
+  color: var(--review-yellow);
+}
+
+.product-card .product-reviews-star.four-star li:nth-child(5){
+  color: var(--review-gray);
+}
+
+.product-card .product-reviews-star.three-star li:nth-child(4){
+  color: var(--review-gray);
+}
+
+.product-card .product-reviews-star.three-star li:nth-child(5){
+  color: var(--review-gray);
+}
+
+.product-card .product-reviews-star.two-star li:nth-child(3){
+  color: var(--review-gray);
+}
+
+.product-card .product-reviews-star.two-star li:nth-child(4){
+  color: var(--review-gray);
+}
+
+.product-card .product-reviews-star.two-star li:nth-child(5){
+  color: var(--review-gray);
+}
+
+.product-card .product-reviews-star.one-star li:nth-child(2){
+  color: var(--review-gray);
+}
+
+.product-card .product-reviews-star.one-star li:nth-child(3){
+  color: var(--review-gray);
+}
+
+.product-card .product-reviews-star.one-star li:nth-child(4){
+  color: var(--review-gray);
+}
+
+.product-card .product-reviews-star.one-star li:nth-child(5){
+  color: var(--review-gray);
+}
+
+@media (max-width: 1700px) {
+  .stroke-gradient-text{
+    font-size: 150px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .stroke-gradient-text{
+    font-size: 115px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .best-selling {
+    margin-top: 0;
+  }
+  .bst_products_row .product-card{
+  width: calc(50% - 13px);
+  }
+}
+
+@media (max-width: 992px) {
+  .stroke-gradient-text {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 700px) {
+  .filter-nav{
+    gap: 16px;
+  }
+   .stroke-gradient-text {
+    font-size: 55px;
+  }
+  .best-selling > h2 {
+    margin-right: 0;
+  }
+
+  .best-selling-top h2 {
+    font-size: 50px;
+  }
+
+  .bst_products_row .product-card{
+    width:100%;
+  }
+}
+
+/** wcs section start **/
+.wcs-section > h2{
+  padding-left: 88px;
 }
