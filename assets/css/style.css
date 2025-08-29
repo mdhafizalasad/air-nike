@@ -410,7 +410,7 @@ h6 {
 
 .btn-primary,
 .btn-transparent,
-.outline-btn {
+.outline-btn, .btn-white {
   padding: 18px 28px;
   border-radius: 50px;
   background-color: var(--primary-color);
@@ -456,6 +456,16 @@ h6 {
   background-color: var(--primary-color);
   color: var(--text-white);
   border-color: var(--primary-color);
+}
+
+.btn-white {
+  background-color: var(--color-white);
+  color: var(--primary-color);
+}
+
+.btn-white:hover {
+  background-color: var(--text-dark);
+  color: var(--color-white);
 }
 
 .hero-btn-group a {
@@ -1398,4 +1408,45 @@ h6 {
   line-height: 60px;
   }
 
+}
+
+/** offer section **/
+.offer-section > h2 {
+  margin-left: 30px;
+}
+.box-right{
+  text-align: right;
+}
+
+.discount-banner{
+  background: var(--primary-color);
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 38px;
+}
+
+.section-title .banner-title .section-subtitle{
+  color: var(--color-white);
+  font-size: 32px;
+  line-height: 110px;
+  font-weight: 900;
+  padding-left: 60px;
+}
+
+.section-title .banner-title .section-subtitle::before{
+  color: var(--color-white);
+  bottom: 12px;
+  width: 50px;
+}
+
+.section-title .banner-title h2 {
+  font-size: 64px;
+  line-height: 100px;
+  color: var(--color-white);
+  margin-top: -36px;
+}
+
+.discount-banner-content .btn-white {
+  margin-top: 24px;
 }
