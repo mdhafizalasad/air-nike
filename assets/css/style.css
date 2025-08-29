@@ -410,7 +410,8 @@ h6 {
 
 .btn-primary,
 .btn-transparent,
-.outline-btn, .btn-white {
+.outline-btn,
+.btn-white {
   padding: 18px 28px;
   border-radius: 50px;
   background-color: var(--primary-color);
@@ -1393,10 +1394,9 @@ h6 {
     margin-top: 0;
   }
   .feedback-content .title-with-mark {
-  font-size: 60px;
-  line-height: 60px;
+    font-size: 60px;
+    line-height: 60px;
   }
-
 }
 
 @media (max-width: 700px) {
@@ -1404,29 +1404,33 @@ h6 {
     margin-right: 0;
   }
   .feedback-content .title-with-mark {
-  font-size: 48px;
-  line-height: 60px;
+    font-size: 48px;
+    line-height: 60px;
   }
-
 }
 
 /** offer section **/
+.offer-section {
+  overflow: hidden;
+}
 .offer-section > h2 {
   margin-left: 30px;
 }
-.box-right{
+.box-right {
   text-align: right;
 }
 
-.discount-banner{
+.discount-banner {
   background: var(--primary-color);
   text-align: left;
   display: inline-flex;
   align-items: center;
   padding-left: 38px;
+  margin-top: -60px;
+  box-sizing: border-box;
 }
 
-.section-title .banner-title .section-subtitle{
+.section-title.banner-title .section-subtitle {
   color: var(--color-white);
   font-size: 32px;
   line-height: 110px;
@@ -1434,13 +1438,13 @@ h6 {
   padding-left: 60px;
 }
 
-.section-title .banner-title .section-subtitle::before{
+.section-title.banner-title .section-subtitle::before {
   color: var(--color-white);
   bottom: 12px;
   width: 50px;
 }
 
-.section-title .banner-title h2 {
+.section-title.banner-title h2 {
   font-size: 64px;
   line-height: 100px;
   color: var(--color-white);
@@ -1449,4 +1453,38 @@ h6 {
 
 .discount-banner-content .btn-white {
   margin-top: 24px;
+}
+
+@media (max-width: 1300px) {
+  .discount-banner {
+    margin-top: -40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .offer-section > h2 {
+    margin-left: 0;
+    text-align: center;
+  }
+  .discount-banner {
+    margin-top: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0 24px 48px;
+  }
+  .discount-banner .discount-banner-content,
+  .discount-banner .discount-banner-image 
+  {
+    width: 100%;
+    text-align: center;
+  }
+  .discount-banner .discount-banner-content
+  {
+    order: 2;
+  }
+  .section-title.banner-title h2 {
+    font-size: 50px;
+    line-height:50px ;
+    margin-top: -15px;
+  }
 }
