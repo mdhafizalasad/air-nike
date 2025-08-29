@@ -1412,6 +1412,7 @@ h6 {
 /** offer section **/
 .offer-section {
   overflow: hidden;
+  padding-bottom: 160px;
 }
 .offer-section > h2 {
   margin-left: 30px;
@@ -1462,6 +1463,9 @@ h6 {
 }
 
 @media (max-width: 992px) {
+  .offer-section {
+    padding-bottom: 70px;
+  }
   .offer-section > h2 {
     margin-left: 0;
     text-align: center;
@@ -1473,18 +1477,101 @@ h6 {
     padding: 0 24px 48px;
   }
   .discount-banner .discount-banner-content,
-  .discount-banner .discount-banner-image 
-  {
+  .discount-banner .discount-banner-image {
     width: 100%;
     text-align: center;
   }
-  .discount-banner .discount-banner-content
-  {
+  .discount-banner .discount-banner-content {
     order: 2;
   }
   .section-title.banner-title h2 {
     font-size: 50px;
-    line-height:50px ;
+    line-height: 50px;
     margin-top: -15px;
   }
+}
+
+/** footer section **/
+
+.footer-section {
+  position: relative;
+  z-index: 1;
+  padding: 100px 0;
+}
+
+.footer-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(50% - 24px);
+  height: 100%;
+  z-index: -1;
+  background: var(--dark-canvus-bg);
+}
+.footer-left {
+  max-width: 600px;
+}
+
+.footer-left h2 {
+  font-size: 42px;
+  line-height: 56px;
+  color: var(--color-white);
+}
+
+.footer-left p {
+  color: #C2C2C2;
+}
+
+.tel-btn  {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 56px;
+
+}
+.tel-btn .tel-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--primary-color);
+  color: var(--color-white);
+  display: inline-flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.newsletter-form {
+  width: 440px;
+  display: flex;
+}
+
+.newsletter-form input
+{
+  padding: 18px 17px;
+  background-color: var(--color-white);
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-radius: 5px 0 0 5px;
+  color: var(--text-color);
+}
+
+.newsletter-form input::placeholder
+{
+  color: #323232;
+}
+
+.newsletter-form button {
+  flex-shrink: 0;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  border: 0;
+}
+
+.newsletter-form button:hover {
+  background-color: var(--primary-color);
 }
