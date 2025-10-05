@@ -283,6 +283,7 @@ h6 {
   width: 32px;
 }
 
+
 /** header responsive css **/
 @media (max-width: 1400px) {
   .header-content {
@@ -318,6 +319,26 @@ h6 {
   .circle-btn {
     display: none;
   }
+}
+
+.canvas-box {
+  padding: 60px 24px 40px;
+}
+
+.canvas-box .btn-close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+.canvas-box .gallery  {
+display: flex;
+gap: 24px;
+flex-wrap: wrap;
+}
+
+.canvas-box .gallery li{
+  width: calc(50% - 48px);
+  border: 1px solid #f9f9f9;
 }
 
 /** hero section **/

@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Air Nike HTML Template</title>
-    <link rel="stylesheet" href="assets/css/all.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/all.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <div class="p-2">
+    <button
+      type="button" class="btn btn-secondary"
+      data-bs-toggle="tooltip"
+      data-bs-placement="bottom"
+      data-bs-title="Here is a Tooltip"
+    >
+      Tooltip on top
+    </button>
+    </div>
+
+
+    <!-- <button
+      type="button"
+      class="btn btn-secondary"
+      data-bs-toggle="tooltip"
+      data-bs-placement="right"
+      data-bs-title="Tooltip on right"
+    >
+      Tooltip on right
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-bs-toggle="tooltip"
+      data-bs-placement="bottom"
+      data-bs-title="Tooltip on bottom"
+    >
+      Tooltip on bottom
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-bs-toggle="tooltip"
+      data-bs-placement="left"
+      data-bs-title="Tooltip on left"
+    >
+      Tooltip on left
+    </button> -->
+
     <!--header section start-->
     <header class="header-section">
       <div class="container">
         <div class="header-content">
           <div class="header-logo">
             <a href="index.html"
-              ><img src="assets/images/logo.png" alt="Logo"></a>
+              ><img src="assets/images/logo.png" alt="Logo"
+            /></a>
           </div>
           <div class="header-right">
             <div class="header-nav-menu">
@@ -82,13 +124,23 @@
                 </svg>
               </button>
 
-              <button type="button" class="header-canvus-btn canvus-btn">
+              <button
+                type="button"
+                class="header-canvus-btn canvus-btn"
+                data-bs-target="#canvas-box"
+                data-bs-toggle="offcanvas"
+              >
                 <span></span>
                 <span></span>
                 <span></span>
               </button>
 
-              <button type="button" class="header-canvus-btn mobile-menu-btn">
+              <button
+                type="button"
+                class="header-canvus-btn mobile-menu-btn"
+                data-bs-target="#canvas-menu"
+                data-bs-toggle="offcanvas"
+              >
                 <span></span>
                 <span></span>
                 <span></span>
@@ -98,25 +150,96 @@
         </div>
       </div>
     </header>
-
     <!--header section end-->
+
+    <div class="offcanvas offcanvas-end canvas-box" id="canvas-box">
+      <a href="#" class="btn-close" data-bs-dismiss="offcanvas"></a>
+      <h2>Canvas Gallery</h2>
+
+      <ul class="gallery">
+        <li>
+          <img src="assets/images/products/shoes-1.png" class="img-fluid" />
+        </li>
+        <li>
+          <img src="assets/images/products/shoes-1.png" class="img-fluid" />
+        </li>
+        <li>
+          <img src="assets/images/products/shoes-1.png" class="img-fluid" />
+        </li>
+        <li>
+          <img src="assets/images/products/shoes-1.png" class="img-fluid" />
+        </li>
+        <li>
+          <img src="assets/images/products/shoes-1.png" class="img-fluid" />
+        </li>
+        <li>
+          <img src="assets/images/products/shoes-1.png" class="img-fluid" />
+        </li>
+      </ul>
+
+      <!-- <div class="gallery d-flex flex-wrap gap-4">
+ 
+  <img src="assets/images/products/shoes-1.png" class="img-fluid">
+  <img src="assets/images/products/shoes-1.png" class="img-fluid">
+  <img src="assets/images/products/shoes-1.png" class="img-fluid">
+  <img src="assets/images/products/shoes-1.png" class="img-fluid">
+  <img src="assets/images/products/shoes-1.png" class="img-fluid">
+</div> -->
+    </div>
+    <div class="offcanvas offcanvas-end canvas-menu" id="canvas-menu">
+      <a href="#" class="btn-close" data-bs-dismiss="offcanvas"></a>
+      <h2>Canvas Gallery</h2>
+
+      <ul class="gallery">
+        <li>
+          <img src="assets/images/products/shoes-1.png" class="img-fluid" />
+        </li>
+        <li>
+          <img src="assets/images/products/shoes-1.png" class="img-fluid" />
+        </li>
+        <li>
+          <img src="assets/images/products/shoes-1.png" class="img-fluid" />
+        </li>
+        <li>
+          <img src="assets/images/products/shoes-1.png" class="img-fluid" />
+        </li>
+        <li>
+          <img src="assets/images/products/shoes-1.png" class="img-fluid" />
+        </li>
+        <li>
+          <img src="assets/images/products/shoes-1.png" class="img-fluid" />
+        </li>
+      </ul>
+
+      <!-- <div class="gallery d-flex flex-wrap gap-4">
+ 
+  <img src="assets/images/products/shoes-1.png" class="img-fluid">
+  <img src="assets/images/products/shoes-1.png" class="img-fluid">
+  <img src="assets/images/products/shoes-1.png" class="img-fluid">
+  <img src="assets/images/products/shoes-1.png" class="img-fluid">
+  <img src="assets/images/products/shoes-1.png" class="img-fluid">
+</div> -->
+    </div>
 
     <!--hero section start-->
     <section class="hero-section">
       <img
         src="assets/images/shapes/bubble.png"
         alt="buble"
-        class="bubble-shape">
+        class="bubble-shape"
+      />
       <img
         src="assets/images/shapes/bubbles-large.png"
         alt="buble"
-        class="bubble-group-shape">
+        class="bubble-group-shape"
+      />
       <div class="container">
         <div class="hero_content_wrapper">
           <img
             src="assets/images/hero-shoes.png"
             alt="shoes"
-            class="hero-shoes">
+            class="hero-shoes"
+          />
           <span class="hero-stroke-text">NIKE</span>
           <div class="hero-content">
             <h2 class="hero-subtitle">Design & Quantity</h2>
@@ -162,11 +285,13 @@
                   <img
                     src="assets/images/products/shoes-1.png"
                     alt="product"
-                    class="feature-image normal-state">
+                    class="feature-image normal-state"
+                  />
                   <img
                     src="assets/images/products/shoes-2.png"
                     alt="product"
-                    class="feature-image hover-state">
+                    class="feature-image hover-state"
+                  />
                 </div>
                 <div class="product-card-content">
                   <div>
@@ -183,11 +308,13 @@
                   <img
                     src="assets/images/products/shoes-3.png"
                     alt="product"
-                    class="feature-image normal-state">
+                    class="feature-image normal-state"
+                  />
                   <img
                     src="assets/images/products/shoes-2.png"
                     alt="product"
-                    class="feature-image hover-state">
+                    class="feature-image hover-state"
+                  />
                 </div>
                 <div class="product-card-content">
                   <div>
@@ -204,11 +331,13 @@
                   <img
                     src="assets/images/products/shoes-2.png"
                     alt="product"
-                    class="feature-image normal-state">
+                    class="feature-image normal-state"
+                  />
                   <img
                     src="assets/images/products/shoes-1.png"
                     alt="product"
-                    class="feature-image hover-state">
+                    class="feature-image hover-state"
+                  />
                 </div>
                 <div class="product-card-content">
                   <div>
@@ -225,11 +354,13 @@
                   <img
                     src="assets/images/products/shoes-1.png"
                     alt="product"
-                    class="feature-image normal-state">
+                    class="feature-image normal-state"
+                  />
                   <img
                     src="assets/images/products/shoes-2.png"
                     alt="product"
-                    class="feature-image hover-state">
+                    class="feature-image hover-state"
+                  />
                 </div>
                 <div class="product-card-content">
                   <div>
@@ -246,11 +377,13 @@
                   <img
                     src="assets/images/products/shoes-3.png"
                     alt="product"
-                    class="feature-image normal-state">
+                    class="feature-image normal-state"
+                  />
                   <img
                     src="assets/images/products/shoes-2.png"
                     alt="product"
-                    class="feature-image hover-state">
+                    class="feature-image hover-state"
+                  />
                 </div>
                 <div class="product-card-content">
                   <div>
@@ -267,11 +400,13 @@
                   <img
                     src="assets/images/products/shoes-1.png"
                     alt="product"
-                    class="feature-image normal-state">
+                    class="feature-image normal-state"
+                  />
                   <img
                     src="assets/images/products/shoes-3.png"
                     alt="product"
-                    class="feature-image hover-state">
+                    class="feature-image hover-state"
+                  />
                 </div>
                 <div class="product-card-content">
                   <div>
@@ -304,7 +439,8 @@
             <img
               src="assets/images/man.png"
               alt="running man"
-              class="running-man">
+              class="running-man"
+            />
             <span class="circle-shape"></span>
             <span class="about-stroke-text">About </span>
           </div>
@@ -312,7 +448,8 @@
             <img
               src="assets/images/shapes/flower.png"
               alt="flower"
-              class="flower-shape">
+              class="flower-shape"
+            />
             <div class="section-title">
               <span class="section-subtitle">Sports Shoes</span>
               <h2>Fashion Style</h2>
@@ -352,11 +489,13 @@
               <img
                 src="assets/images/products/shoes-1.png"
                 alt="product"
-                class="feature-image normal-state">
+                class="feature-image normal-state"
+              />
               <img
                 src="assets/images/products/shoes-3.png"
                 alt="product"
-                class="feature-image hover-state">
+                class="feature-image hover-state"
+              />
               <div class="product-actions-btn">
                 <button type="button" class="wish-btn">
                   <svg
@@ -434,11 +573,13 @@
               <img
                 src="assets/images/products/shoes-2.png"
                 alt="product"
-                class="feature-image normal-state">
+                class="feature-image normal-state"
+              />
               <img
                 src="assets/images/products/shoes-3.png"
                 alt="product"
-                class="feature-image hover-state">
+                class="feature-image hover-state"
+              />
               <div class="product-actions-btn">
                 <button type="button" class="wish-btn">
                   <svg
@@ -516,11 +657,13 @@
               <img
                 src="assets/images/products/shoes-3.png"
                 alt="product"
-                class="feature-image normal-state">
+                class="feature-image normal-state"
+              />
               <img
                 src="assets/images/products/shoes-1.png"
                 alt="product"
-                class="feature-image hover-state">
+                class="feature-image hover-state"
+              />
               <div class="product-actions-btn">
                 <button type="button" class="wish-btn">
                   <svg
@@ -598,11 +741,13 @@
               <img
                 src="assets/images/products/shoes-2.png"
                 alt="product"
-                class="feature-image normal-state">
+                class="feature-image normal-state"
+              />
               <img
                 src="assets/images/products/shoes-1.png"
                 alt="product"
-                class="feature-image hover-state">
+                class="feature-image hover-state"
+              />
               <div class="product-actions-btn">
                 <button type="button" class="wish-btn">
                   <svg
@@ -680,11 +825,13 @@
               <img
                 src="assets/images/products/shoes-3.png"
                 alt="product"
-                class="feature-image normal-state">
+                class="feature-image normal-state"
+              />
               <img
                 src="assets/images/products/shoes-1.png"
                 alt="product"
-                class="feature-image hover-state">
+                class="feature-image hover-state"
+              />
               <div class="product-actions-btn">
                 <button type="button" class="wish-btn">
                   <svg
@@ -762,11 +909,13 @@
               <img
                 src="assets/images/products/shoes-1.png"
                 alt="product"
-                class="feature-image normal-state">
+                class="feature-image normal-state"
+              />
               <img
                 src="assets/images/products/shoes-3.png"
                 alt="product"
-                class="feature-image hover-state">
+                class="feature-image hover-state"
+              />
               <div class="product-actions-btn">
                 <button type="button" class="wish-btn">
                   <svg
@@ -852,7 +1001,8 @@
       <img
         src="assets/images/shapes/bubbles-large.png"
         alt="bubble"
-        class="wcs-bubble-shape">
+        class="wcs-bubble-shape"
+      />
       <h2 class="stroke-gradient-text">Why Choose Us</h2>
       <div class="container">
         <div class="wcs-row">
@@ -872,7 +1022,7 @@
             </p>
             <div class="wcs-feature-row">
               <div class="feature-card">
-                <img src="assets/images/shapes/icon1.svg" alt="icon">
+                <img src="assets/images/shapes/icon1.svg" alt="icon" />
                 <h4>Designed Padded Insole</h4>
                 <p>
                   Manufactured products team building core competencies
@@ -880,7 +1030,7 @@
                 </p>
               </div>
               <div class="feature-card">
-                <img src="assets/images/shapes/icon1.svg" alt="icon">
+                <img src="assets/images/shapes/icon1.svg" alt="icon" />
                 <h4>Designed Padded Insole</h4>
                 <p>
                   Manufactured products team building core competencies
@@ -888,7 +1038,7 @@
                 </p>
               </div>
               <div class="feature-card">
-                <img src="assets/images/shapes/icon1.svg" alt="icon">
+                <img src="assets/images/shapes/icon1.svg" alt="icon" />
                 <h4>Designed Padded Insole</h4>
                 <p>
                   Manufactured products team building core competencies
@@ -898,7 +1048,7 @@
             </div>
           </div>
           <div class="wcs-image-right">
-            <img src="assets/images/circle-shoes.png" alt="shoes">
+            <img src="assets/images/circle-shoes.png" alt="shoes" />
           </div>
         </div>
       </div>
@@ -911,7 +1061,8 @@
       <img
         src="assets/images/shapes/quotes.png"
         alt="quto"
-        class="quote-icon">
+        class="quote-icon"
+      />
       <div class="container">
         <div class="feedback-content">
           <h2 class="title-with-mark">Customer<mark> - </mark>Feedback</h2>
@@ -955,7 +1106,7 @@
               </div>
             </div>
             <div class="discount-banner-image">
-              <img src="assets/images/banner.png" alt="banner image">
+              <img src="assets/images/banner.png" alt="banner image" />
             </div>
           </div>
         </div>
@@ -965,7 +1116,11 @@
 
     <!--footer section start-->
     <footer class="footer-section">
-      <img src="assets/images/shapes/bubbles-large.png" alt="buble" class="footer-bubble">
+      <img
+        src="assets/images/shapes/bubbles-large.png"
+        alt="buble"
+        class="footer-bubble"
+      />
       <div class="container">
         <div class="footer-row">
           <div class="footer-left">
@@ -985,7 +1140,7 @@
               <h5>Get latest updates & offers</h5>
 
               <form class="newsletter-form" action="#">
-                <input type="email" placeholder="Enter your email....">
+                <input type="email" placeholder="Enter your email...." />
                 <button type="submit" class="btn-primary">Subscribe</button>
               </form>
             </div>
@@ -994,16 +1149,17 @@
             <h4>Don't late, join with us today!</h4>
             <form class="contact-form">
               <div class="input-group">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="First Name" />
+                <input type="text" placeholder="Last Name" />
               </div>
               <div class="input-group">
-                <input type="email" placeholder="Email">
-                <input type="tel" placeholder="Phone Number">
+                <input type="email" placeholder="Email" />
+                <input type="tel" placeholder="Phone Number" />
               </div>
               <textarea placeholder="Message" rows="10"></textarea>
-              <button type="submit" class="btn-secondary">Submit <i class="fa-solid fa-arrow-right"></i
-              ></button>
+              <button type="submit" class="btn-secondary">
+                Submit <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </form>
             <nav class="footer-nav">
               <ul>
@@ -1020,5 +1176,17 @@
       </div>
     </footer>
     <!--footer section end-->
+
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
   </body>
 </html>
